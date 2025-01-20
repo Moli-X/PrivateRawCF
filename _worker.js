@@ -162,13 +162,13 @@ async function Moli() {
   </head>
   <body>
     <div class="container">
-      <h1>Welcome to Moli!</h1>
+      <h1>欢迎!</h1>
       <p>如果你看到这个页面，说明Cloudflare服务器已经成功安装并工作。</p>
       <div class="links">
         <a href="https://github.com/Moli-X/" class="btn">查看仓库</a>
         <a href="https://github.com/Moli-X/PrivateRawCF/" class="btn">查看项目</a>
       </div>
-      <p style="margin-top: 2rem;"><em>Thank you for using Moli.</em></p>
+      <p style="margin-top: 2rem;"><em>谢谢你使用此项目</em></p>
     </div>
   </body>
   </html>
