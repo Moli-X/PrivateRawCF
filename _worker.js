@@ -68,34 +68,112 @@ export default {
 };
 
 async function nginx() {
-	const text = `
-	<!DOCTYPE html>
-	<html>
-	<head>
-	<title>Welcome to nginx!</title>
-	<style>
-		body {
-			width: 35em;
-			margin: 0 auto;
-			font-family: Tahoma, Verdana, Arial, sans-serif;
-		}
-	</style>
-	</head>
-	<body>
-	<h1>Welcome to nginx!</h1>
-	<p>If you see this page, the nginx web server is successfully installed and
-	working. Further configuration is required.</p>
-	
-	<p>For online documentation and support please refer to
-	<a href="http://nginx.org/">nginx.org</a>.<br/>
-	Commercial support is available at
-	<a href="http://nginx.com/">nginx.com</a>.</p>
-	
-	<p><em>Thank you for using nginx.</em></p>
-	</body>
-	</html>
-	`
-	return text ;
+  const text = `
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to nginx!</title>
+    <style>
+      :root {
+        --primary-color: #2563eb;
+        --secondary-color: #1e40af;
+        --background-color: #f8fafc;
+        --text-color: #1e293b;
+      }
+
+      body {
+        margin: 0;
+        padding: 2rem;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 800px;
+        padding: 2rem;
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: var(--primary-color);
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 1rem 0;
+      }
+
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      a:hover {
+        color: var(--secondary-color);
+      }
+
+      .links {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        background: var(--primary-color);
+        color: white;
+        transition: all 0.2s;
+      }
+
+      .btn:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to nginx!</h1>
+      <p>If you see this page, the nginx web server is successfully installed and working. Further configuration is required.</p>
+      <div class="links">
+        <a href="http://nginx.org/" class="btn">Documentation</a>
+        <a href="http://nginx.com/" class="btn">Commercial Support</a>
+      </div>
+      <p style="margin-top: 2rem;"><em>Thank you for using nginx.</em></p>
+    </div>
+  </body>
+  </html>
+  `;
+  return text;
 }
 
 async function ADD(envadd) {
