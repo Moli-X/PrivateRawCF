@@ -105,7 +105,7 @@ GitHub个人访问令牌可以在GitHub设置中的"Developer settings" > "Perso
 | GH_REPO| PrivateRawCF | 你的GitHub仓库(必须设置`GH_NAME`变量为前提) |
 | GH_BRANCH| main | 你的GitHub仓库(必须设置`GH_NAME`和`GH_REPO`变量为前提) |
 | URL302 | https://t.me/QuantX | 主页302跳转 |
-| URL | https://github.com/Moli-X/PrivateRawCF/blob/main/README.md | 主页伪装 |
+| URL | https://privaterawcf.pages.dev | 主页伪装 |
 | ERROR | 无法获取文件，检查路径或TOKEN是否正确。| 自定义错误提示 |
 
 # 感谢
