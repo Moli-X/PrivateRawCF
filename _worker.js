@@ -57,8 +57,8 @@ export default {
 				const URL = URLs[Math.floor(Math.random() * URLs.length)];
 				return envKey === 'URL302' ? Response.redirect(URL, 302) : fetch(new Request(URL, request));
 			}
-			//首页改成一个nginx伪装页
-			return new Response(await nginx(), {
+			//首页改成一个Moli伪装页
+			return new Response(await Moli(), {
 				headers: {
 					'Content-Type': 'text/html; charset=UTF-8',
 				},
@@ -67,14 +67,14 @@ export default {
 	}
 };
 
-async function nginx() {
+async function Moli() {
   const text = `
   <!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to nginx!</title>
+    <title>Welcome to Moli!</title>
     <style>
       :root {
         --primary-color: #2563eb;
@@ -162,13 +162,13 @@ async function nginx() {
   </head>
   <body>
     <div class="container">
-      <h1>Welcome to nginx!</h1>
-      <p>If you see this page, the nginx web server is successfully installed and working. Further configuration is required.</p>
+      <h1>Welcome to Moli!</h1>
+      <p>如果你看到这个页面，说明Cloudflare服务器已经成功安装并工作。</p>
       <div class="links">
-        <a href="http://nginx.org/" class="btn">Documentation</a>
-        <a href="http://nginx.com/" class="btn">Commercial Support</a>
+        <a href="https://github.com/Moli-X/" class="btn">查看仓库</a>
+        <a href="https://github.com/Moli-X/PrivateRawCF/" class="btn">查看项目</a>
       </div>
-      <p style="margin-top: 2rem;"><em>Thank you for using nginx.</em></p>
+      <p style="margin-top: 2rem;"><em>Thank you for using Moli.</em></p>
     </div>
   </body>
   </html>
