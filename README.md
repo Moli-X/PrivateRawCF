@@ -1,4 +1,4 @@
-# CF-Workers-Raw：轻松访问GitHub私有仓库
+# PrivateRawCF：轻松访问GitHub私有仓库
 这个项目允许你通过Cloudflare Workers安全地访问GitHub私有仓库中的原始文件，无需直接暴露你的GitHub令牌。
 ## 为什么需要这个工具？
 
